@@ -1,0 +1,8 @@
+header a {
+  color: red;
+  text-decoration: none; /* optional: removes underline */
+}
+
+header a:hover {
+  color: darkred; /* optional hover effect */
+}

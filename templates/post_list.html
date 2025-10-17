@@ -4,7 +4,13 @@
 <h1>Message Board Homepage</h1>
 <ul>
   {% for post in posts %}
-  <li>{{ post.text }}</li>
+    <li>
+      <a href="{% url 'post_detail' post.pk %}">
+        <strong>{{ post.title }}</strong>
+      </a><br>
+      {{ post.body|truncatewords:20 }}<br>
+      <em>by {{ post.author }}</em>
+    </li>
   {% endfor %}
 </ul>
 {% endblock %}

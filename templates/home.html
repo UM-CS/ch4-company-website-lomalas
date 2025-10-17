@@ -10,4 +10,14 @@
   {% endfor %}
 </ul>
 <p>{{ message|title }}</p>
-{% endblock %}
+
+<p> This is the post list </p>
+
+{% for post in posts %}
+<div class="post-entry">
+<h2><a herf="{{ post.get_absolute_url }}">{{ post.title}}</a></h2>
+<p>{{ post.body }}</p>
+</div>
+{% endfor %}
+
+{% endblock content %}
